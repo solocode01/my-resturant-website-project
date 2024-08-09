@@ -1,0 +1,59 @@
+{% extends "components/base.html" %}
+
+{% load static extra %}
+
+<title>{% block title %} Food Website | Checkout {% endblock %}</title>
+
+{% block content %}
+
+  <div class="alert-box">
+    <img src="{% static 'images/errors.png' %}" class="alert-img" alt="">
+    <p class="alert-msg"></p>
+  </div>
+  
+  <form method="post">
+    {% csrf_token %}
+    <div class="form">
+      {% for fields in form %}
+				<div>
+						{{fields}}
+				</div>
+        {% endfor %}
+    </div>
+  </div>
+
+  <div class="cart-section">   
+    <div class="product-list">
+      <p class="section-heading">Your cart</p>
+      <div class="cart">
+        {% for cart_items in cart.cartitem_set.all %}
+          <div class="sm-product">
+            <img src="{{ cart_items.menu.image.url }}" class="sm-product-img" alt="">
+            <div class="sm-text">
+              <p class="sm-product-name">{{ cart_items.menu.name }}</p>
+              <p class="sm-des">{{ cart_items.menu.description }} </p>
+            </div>
+            <div class="item-counter">
+              <button class="counter-btn decrement">-</button>
+              <p class="item-count">{{ cart_items.quantity }}</p>
+              <button class="counter-btn increment">+</button>
+            </div>
+            <p class="sm-price">N{{ cart_items.menu.price }} </p>
+            <a href="{% url "remove_cart" cart_items.id %}"><button class="sm-delete-btn"><i class="fas fa-trash"></i></button></a>
+          </div>
+        {% endfor %}
+
+      </div>  
+    </div>
+    <div class="checkout-section">
+      <div class="checkout-box">
+        <p class="text">your total bill,</p>
+        <h1 class="bill">N{% get_total_price %} </h1>
+        <button class="place-order-btn" type="submit">Place order</button>
+      </div>
+    </div>
+  </div>  
+
+  </form>
+
+{% endblock %}

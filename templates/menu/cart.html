@@ -1,0 +1,137 @@
+{% extends "components/base.html" %}
+{% load static extra %}
+
+<title>{% block title %} Food Website | Cart {% endblock %}</title>
+<link rel="stylesheet" href="/static/css/style.css">
+
+{% block content %}
+  <div class="cart-section">   
+    <div class="product-list">
+      <p class="section-heading">Your cart</p>
+      <div class="cart">
+        <!--Cart product goes here--> 
+        <!-- <img src="{% static 'images/empty-cart.png' %}" class="empty-img" alt=""> -->
+        {% if cart %}
+          {% for cart_items in cart %}
+
+          <div class="sm-product">
+            <img src="{{ cart_items.menu.image.url }}" class="sm-product-img" alt="">
+            <div class="sm-text">
+              <p class="sm-product-name">{{ cart_items.menu.name }}</p>
+              <p class="sm-des">{{ cart_items.menu.description }} </p>
+            </div>
+            <div class="item-counter">
+              {% csrf_token %}
+              <button class="counter-btn decrement reduce-cart" data-item-id="{{ cart_items.menu.id }}">-</button>
+              <p class="item-count">{{ cart_items.quantity }}</p>
+
+              <button class="counter-btn increment update-to-cart" data-item-id="{{ cart_items.menu.id }}">+</button>
+            </div>
+            <p class="sm-price">N{{ cart_items.menu.price }} </p>
+            <a href="{% url "remove_cart" cart_items.id %}"><button class="sm-delete-btn"><i class="fas fa-trash"></i></button></a>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p> no item found </p>
+        {% endif %}
+      </div>  
+    </div>
+    <div class="checkout-section">
+      <div class="checkout-box">
+        <p class="text">your total bill,</p>
+        {% if not cart %}
+        <h1 class="bill">N00</h1>
+        {% else %}
+        <h1 class="bill">N{% get_total_price %}</h1>
+        <a href="{% url "checkout" %}" class="checkout-btn">Checkout</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>  
+    
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+      let buttons = document.querySelectorAll(".update-to-cart");
+
+      buttons.forEach(function(button) {
+          button.addEventListener("click", function(e) {
+              e.preventDefault();
+
+              let itemID = this.getAttribute("data-item-id");
+              console.log(itemID);
+
+
+              let data = {
+                  "id": itemID,
+              };
+
+              console.log(data);
+
+              $.ajax({
+                  type: "POST",
+                  url: "/update_to_cart/",
+                  dataType: "json",
+                  data: data,
+                  cache: false, // Prevent caching issues
+                  beforeSend: function(xhr) {
+                      xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                  },
+                  success: function(res) {
+                      alert(res.msg);
+                      window.location.reload();
+                  },
+                  error: function(err) {
+                      alert("Error: " + (err.responseText || "An error occurred."));
+                      console.log(err);
+                  }
+              });
+          });
+      });
+  });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+      let buttons = document.querySelectorAll(".reduce-cart");
+
+      buttons.forEach(function(button) {
+          button.addEventListener("click", function(e) {
+              e.preventDefault();
+
+              let itemID = this.getAttribute("data-item-id");
+              console.log(itemID);
+              
+
+              let data = {
+                  "id": itemID,
+              };
+
+              console.log(data);
+
+              $.ajax({
+                  type: "POST",
+                  url: "/reduce_cart/",
+                  dataType: "json",
+                  data: data,
+                  cache: false, // Prevent caching issues
+                  beforeSend: function(xhr) {
+                      xhr.setRequestHeader("X-CSRFToken", csrf_token);
+                  },
+                  success: function(res) {
+                      alert(res.msg);
+                      window.location.reload();
+                  },
+                  error: function(err) {
+                      alert("Error: " + (err.responseText || "An error occurred."));
+                      console.log(err);
+                  }
+              });
+          });
+      });
+  });
+  </script>
+
+{% endblock %}

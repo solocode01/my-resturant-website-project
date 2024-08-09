@@ -1,0 +1,117 @@
+{% extends "components/base.html" %}
+{% load static %}
+
+
+{% block title %} Menu Details | Menu {% endblock %}
+
+{% block content %}
+<div class="main_slide2">
+    <div class="foodimg">
+      <img src="{% static 'images/home img.png' %}" alt="" />
+    </div>
+    <div>
+      <div>
+        <h2>Why People Choose Us?</h2>
+      </div>
+      <div>
+        <div class="q-ans">
+          <div>
+            <img src="{% static 'images/plate2.png' %}" alt="" />
+          </div>
+          <div>
+            <h4>Great Food</h4>
+            <p>
+              We offer delicious flavourful dishes, using fresh ingredients
+              and skilled preparation techniques.
+            </p>
+          </div>
+        </div>
+        <div class="q-ans">
+          <div>
+            <img src="{% static 'images/plate3.png' %}" alt="" />
+          </div>
+          <div>
+            <h4>Excellent Service</h4>
+            <p>
+              Friendly and attentive staff who provide efficient service,
+              making customers feel welcomed and well taken care of.
+            </p>
+          </div>
+        </div>
+        <div class="q-ans">
+          <div>
+            <img src="{% static 'images/plate4 (2).png' %}" alt="" />
+          </div>
+          <div>
+            <h4>Pleasant Ambiance</h4>
+            <p>A comfortable and enjoyable environemnt for patrons.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_slide3">
+    <div class="fav-head">
+      <h3>Our Recent Food Items</h3>
+      <p>
+        Embark on a culinary journey with Solomon's Cuisine, where each dish
+        tells a story of tradition, innovation, and flavour. From
+        tantalizing appetizers to mouthwatering entrees, experience
+        unforgettable dinning moments with us.
+      </p>
+    </div>
+    <div class="fav-food">
+      <div class="item">
+        <div>
+          <img
+            src="{% static 'images/Fried Turkey Wings, and Rice.jpeg' %}"
+            alt=""
+          />
+        </div>
+        <h3>Fried Rice</h3>
+        <p>
+          Indulge in a culinary masterpiece, crafted with love and expertise
+        </p>
+        <p class="fav-price">N3,000</p>
+        <button class="white_btn"><a href="{% url "menu_details" %}">View Now</a></button>
+      </div>
+      <div class="item">
+        <div>
+          <img
+            src="{% static 'images/Efo riro (Nigerian Spinach stew recipe).jpeg' %}"
+            alt=""
+          />
+        </div>
+        <h3>Vegetable Soup</h3>
+        <p>
+          Savour the symphony of flavours in each succulent bite. Yummy!
+        </p>
+        <p class="fav-price">N2,500</p>
+        <button class="white_btn"><a href="{% url "menu_details" %}">View</a></button>
+      </div>
+      <div class="item">
+        <div>
+          <img src="{% static 'images/home img.png' %}" alt="" />
+        </div>
+        <h3>Pounded Yam</h3>
+        <p>
+          Exotic spices dance on your palate, igniting culinary adventures
+        </p>
+        <p class="fav-price">N2,000</p>
+        <button class="white_btn"><a href="{% url "menu_details" %}">View</a></button>
+      </div>
+      <div class="item">
+        <div>
+          <img src="{% static 'images/Indomie and Egg.jpeg' %}" alt="" />
+        </div>
+        <h3>Indomie and Egg</h3>
+        <p>Taste the essence of tradition infused with modern gastronomy</p>
+        <p class="fav-price">N2,500</p>
+        <button class="white_btn"><a href="{% url "menu_details" %}">View</a></button>
+      </div>
+    </div>
+    <div class="dsgn"></div>
+  </div>
+
+{% endblock %}

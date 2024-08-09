@@ -1,0 +1,122 @@
+{% extends "components/base.html" %}
+{% load static %}
+    {% block title %} Food Website | About {% endblock %}
+
+    {% block content %}
+    <div class="home">
+      <div class="about-section">
+        <div class="chef-feed">
+          <h2>About <span style="color: red">Us</span></h2>
+          <p>
+            At Solomon's Cuisine, we are more than just a restaurant; we are a
+            culinary santuary where passion meets expertise, and every meal
+            tells a story. Our journey began with a vision to celebrate the rich
+            tapestry of flavours fromm around the world, blending tradition with
+            innovation to create unforgettable dining experiences. With each
+            dish, we strive to evoke emotions, ignite converations, and
+            transport our guests on a gastronomic adventure. Our team of
+            dedicated chefs crafts each recipe with care, sourcing the finest
+            ingredients to ensure excellence in every bite; it's about
+            community, connecting, and creating cherished memories. Whether
+            you're a seasonsed food enthusiast or a curious palate explorer, we
+            invite you to join us and embark on a culinary journey unlike any
+            other.
+          </p>
+        </div>
+        <div class="chef">
+          <img src="{% static 'images/Chef catoon.png' %}" alt="" />
+        </div>
+      </div>
+
+      <div class="chef">
+        <div class="fav-head">
+          <h3>Our Golden Chefs</h3>
+        </div>
+        <div class="fav-food">
+          <div class="item">
+            <div>
+              <img src="{% static 'images/ch1.jpg' %}" alt="" />
+            </div>
+            <h3>Steve Bruce</h3>
+            <p>
+              Meet our visionary chef, sculpting culinary masterpiece with
+              passion.
+            </p>
+          </div>
+          <div class="item">
+            <div>
+              <img src="{% static 'images/ch2.jpg' %}" alt="" />
+            </div>
+            <h3>Stella Chris</h3>
+            <p>
+              Experience the magic of our culinary maestro, crafting
+              unforgettable flavours.
+            </p>
+          </div>
+          <div class="item">
+            <div>
+              <img src="{% static 'images/ch3.jpg' %}" alt="" />
+            </div>
+            <h3>Jennie Mark</h3>
+            <p>
+              Indulge in creations by our culinary virtuoso, igniting taste
+              sensations.
+            </p>
+          </div>
+          <div class="item">
+            <div>
+              <img src="{% static 'images/ch4.jpg' %}" alt="" />
+            </div>
+            <h3>Tony Clark</h3>
+            <p>
+              Taste excellence curated by our culinary genius, elevating dining
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="our-story">
+        <div class="fav-head">
+          <h3>Our Story</h3>
+          <p>
+            "At Solomon's Cuisine, our story is one of passion, perseverance,
+            and a deep-rooted love for food. It all began with a dream shared by
+            our founder, Solomon, whose lifelong fascination with culinary arts
+            inspired the creation of a restaurant that would redefine dining
+            experiences. <br />
+            <br />
+            Growing up in a family where food was not just sustenance but a form
+            of expression, Solomon developed an innate appreciation for the art
+            of cooking. From watching his grandmother stir pots of simmering
+            sauces to experimenting with flavors in his own kitchen, he honed
+            his skills and nurtured his passion. <br />
+            <br />
+            After years of working in renowned kitchens around the world,
+            Solomon realized that his true calling lay in sharing his culinary
+            creations with others. And so, Solomon's Cuisine was born &dash;; a
+            manifestation of his vision to create a space where people could
+            come together, share stories, and savor exceptional food. <br />
+            <br />
+            From the moment the doors opened, Solomon's Cuisine captivated
+            diners with its eclectic menu, blending traditional recipes with
+            innovative techniques. Each dish was a reflection of Solomon's
+            dedication to quality, using only the freshest ingredients and
+            infusing them with his signature flair. <br />
+            <br />
+            But beyond the food, Solomon's Cuisine became a hub of community, a
+            place where friendships were forged and memories were made. Whether
+            it was a romantic dinner for two or a lively gathering of friends,
+            every visit to Solomon's was an experience to be cherished. <br />
+            <br />
+            Today, Solomon's Cuisine continues to thrive, guided by the same
+            principles of passion, quality, and hospitality that inspired its
+            inception. As we look to the future, we remain committed to honoring
+            our roots while embracing new culinary adventures, inviting our
+            guests to join us on this delicious journey."
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}

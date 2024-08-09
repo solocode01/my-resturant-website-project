@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+  }
+
+body {
+    background-image: url(/static/images/confetti-sticker.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.congratulations {
+    align-items: center;
+    text-align: center;
+}
+
+.congratulations img {
+    width: 20%;
+    /* margin-top: -20px; */
+}
+
+.congra1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.congra2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 55px;
+}
+
+.congratulations button{
+    font-size: 20px;
+    width: 340px;
+    line-height: 40px;
+    background: #383838;
+    color: #fff;
+    border-radius: 2px;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0;
+  }
+
+
+
