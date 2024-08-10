@@ -1,0 +1,21 @@
+{% load static extra %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Website | Success</title>
+
+    <link rel="stylesheet" href="{% static "css/success.css" %}" />
+  </head>
+  <body>
+    
+    <div class="congratulations">
+      <img src="{% static "images/chef 3.png" %}" alt="">
+      <div class="congra1">Hello {{request.user}}, Your order has been placed.</div>
+      <div class="congra2">Congratulations!</div>
+      <a href="/"><button>Home</button> </a>
+    </div>
+  </body>
+</html>
+

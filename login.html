@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Website | Login</title>
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
+  </head>
+  <body>
+    <img src="{% static 'images/loader.gif' %}" class="loader" alt="" />
+
+    {% if messages %}
+    <div class="alert-box">
+      <img src="{% static 'images/error.png' %}" class="alert-img" alt="" />
+      <p>
+        
+          <ul class="message">
+            {% for message in messages %}
+            <li {% if message.tags %} {{message.tags}} {% endif %}> {{message }} </li>
+            {% endfor %}
+          </ul>
+        </p>
+    </div>
+    {% endif %}
+
+
+    <div class="container">
+      <form method="post" action="">
+        {% csrf_token %}
+      <img src="{% static 'images/Chef catoon.png' %}" alt="" />
+      <div>
+        <input type="text" autocomplete="off" id="username" placeholder="username" name="username" />
+        <input
+          type="password"
+          autocomplete="off"
+          id="password"
+          name="password"
+          placeholder="Password"    
+        />
+        <button class="submit-btn">Login</button>
+      </div>
+      </form>
+      <a href="{% url 'register' %}" class="link"> Don't have an account? Create one</a>
+    </div>
+
+    <script src="{% static 'js/form.js' %}"></script>
+  </body>
+</html>
