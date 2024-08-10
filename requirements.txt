@@ -11,4 +11,4 @@ requests
 tzdata           
 urllib3 
 gunicorn
-SQLite==3.31
+sqlite==3.31
