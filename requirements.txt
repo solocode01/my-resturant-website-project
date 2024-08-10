@@ -11,4 +11,4 @@ requests
 tzdata           
 urllib3 
 gunicorn
-sqlite
+sqlite3
