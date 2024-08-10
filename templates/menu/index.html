@@ -63,7 +63,7 @@
                 <a href="{% url "cart" %}">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>
+                {% comment %} <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>{% endcomment %}
               </li>
   
             </ul>
@@ -124,7 +124,7 @@
               <a href="{% url "cart" %}">
                   <i class="fas fa-shopping-cart"></i>
               </a>
-              <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>
+              {% comment %} <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>{% endcomment %}
             </li>
           </ul>
         </div>
