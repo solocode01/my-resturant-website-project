@@ -79,12 +79,8 @@ WSGI_APPLICATION = 'resturant.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'django_new',
-        'USER': 'root',
-        'PASSWORD': 'SolomonK@1',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -198,5 +194,5 @@ JAZZMIN_SETTINGS = {
 }
 
 
-PAYSTACK_SECRET_KEY ="sk_test_1ef5e3b82a4de898ed673d7e2561e026ab027b56"
-PAYSTACK_PUBLIC_KEY ="pk_test_0a6061ba13ee31e6e6ae9df2654ed5e2f1c79f33"
+PAYSTACK_SECRET_KEY =""
+PAYSTACK_PUBLIC_KEY =""

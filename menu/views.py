@@ -10,7 +10,8 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     menu_new = Menu.objects.all().order_by("-date_updated")[:3]
     popular_menu = Menu.objects.filter(popular=True)
-    return render(request, 'menu/index.html', {'menu_new': menu_new, 'home': True, 'popular_menu': popular_menu})
+    return render(request, 'menu/index.html', {'menu_new': menu_new, 'home': True,
+                                               'popular_menu': popular_menu})
 
 def about(request):
     return render(request, 'menu/about.html', {'about': True,})

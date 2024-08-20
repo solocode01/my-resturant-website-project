@@ -63,7 +63,7 @@
                 <a href="{% url "cart" %}">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
-                {% comment %} <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>{% endcomment %}
+                <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>
               </li>
   
             </ul>
@@ -124,7 +124,7 @@
               <a href="{% url "cart" %}">
                   <i class="fas fa-shopping-cart"></i>
               </a>
-              {% comment %} <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>{% endcomment %}
+              <sup id="item">{% if total %} {{ total }} {% else %} {% get_cart_count %} {% endif %} </sup>
             </li>
           </ul>
         </div>
@@ -165,7 +165,7 @@
   <div class="food-items">  
     <div class="item">
       <div>
-        <img src="{% static 'images/item1.jpg' %}" alt="food item" />
+        <img src="{% static 'images/item1.png' %}" alt="food item" />
       </div>
       <h3>Jollof Rice</h3>
       <p>
@@ -183,7 +183,7 @@
     </div>
     <div class="item">
       <div>
-        <img src="{% static 'images/item3.jpg' %}" alt="food item" />
+        <img src="{% static 'images/item3.png' %}" alt="food item" />
       </div>
       <h3>Grilled Fish</h3>
       <p>
@@ -263,7 +263,7 @@
           <p>
             {{ menus.description }}
           </p>
-          <p class="fav-price">${{ menus.price }} </p>
+          <p class="fav-price">N{{ menus.price }} </p>
           {% csrf_token %}
           <input type="hidden" value="{{ menus.name }}" id="itemid">
           <button class="add-to-cart">Add to Cart</button>
