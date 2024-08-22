@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'SolomonK@1',
         'HOST': 'my-resturant-website-project.onrender.com', '*'   # Or an IP Address that your DB is hosted on
-        'PORT': '4000',
+        'PORT': '3306',
     }
 }
 
