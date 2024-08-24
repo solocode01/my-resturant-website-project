@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-w*x(lmr%_f)rs*+)@i0t-981j_9+vaqt@d*58%y6$+10phv+6+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['my-resturant-website-project.onrender.com', "http://localhost:8000/", "http://127.0.0.1:8000/"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'django_new',
         'USER': 'root',
         'PASSWORD': 'SolomonK@1',
-        'HOST': 'my-resturant-website-project.onrender.com', '*'   # Or an IP Address that your DB is hosted on
+        'HOST': 'my-resturant-website-project.onrender.com'   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
