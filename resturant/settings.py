@@ -77,7 +77,9 @@ WSGI_APPLICATION = 'resturant.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+
+'''
+# DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'django_new',
@@ -85,6 +87,14 @@ DATABASES = {
         'PASSWORD': 'SolomonK@1',
         'HOST': 'my-resturant-website-project.onrender.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
+    }
+}
+'''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
