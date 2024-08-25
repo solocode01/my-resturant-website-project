@@ -166,6 +166,8 @@
 
   .sm-product {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .sm-product img {
@@ -238,6 +240,8 @@
 
   .sm-product {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .sm-product img {

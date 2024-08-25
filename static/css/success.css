@@ -50,5 +50,55 @@ body {
     margin: 30px 0;
   }
 
+  @media only screen and (max-width: 768px){
+    .congra1 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    
+    .congra2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+    }
+    
+    .congratulations button{
+        font-size: 18px;
+        width: 300px;
+        line-height: 40px;
+        background: #383838;
+        color: #fff;
+        border-radius: 2px;
+        text-transform: capitalize;
+        border: none;
+        cursor: pointer;
+        margin: 30px 0;
+    }
 
+  }
+  
+  @media only screen and (max-width: 550px){
+    .congra1 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    
+    .congra2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+    }
+    
+    .congratulations button{
+        font-size: 18px;
+        width: 300px;
+        line-height: 40px;
+        background: #383838;
+        color: #fff;
+        border-radius: 2px;
+        text-transform: capitalize;
+        border: none;
+        cursor: pointer;
+        margin: 30px 0;
+    }
+  }
+  
 
