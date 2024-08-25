@@ -12,3 +12,4 @@ tzdata
 urllib3 
 gunicorn
 MySQL
+whitenoise
