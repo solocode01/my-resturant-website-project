@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-multifilefield
+Version: 1.0
+Summary: Django model and form fields for storring html5 forms multiupload data
+Home-page: https://github.com/Cyberic/django-multifilefield
+Author: Sergey Maltsev
+Author-email: alternativshik@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

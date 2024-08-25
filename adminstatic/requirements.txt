@@ -1,0 +1,14 @@
+asgiref            
+certifi            
+charset-normalizer 
+Django             
+django-jazzmin     
+django-shortcuts   
+idna               
+pillow             
+pip              
+requests         
+tzdata           
+urllib3 
+gunicorn
+MySQL
