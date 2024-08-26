@@ -167,10 +167,15 @@
   .sm-product {
     position: relative;
     display: flex;
-    flex-direction: column;
-    line-height: 5px;
     width: 100%;
     height: 100%;
+  }
+
+  .sm-product-img, 
+  .sm-text,
+  .item-counter,
+  .sm-price {
+    margin-bottom: 5px;
   }
 
   .sm-product img {
@@ -244,7 +249,15 @@
   .sm-product {
     position: relative;
     display: flex;
-    line-height: 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sm-product-img, 
+  .sm-text,
+  .item-counter,
+  .sm-price {
+    margin-bottom: 5px;
   }
 
   .sm-product img {
