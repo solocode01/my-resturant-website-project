@@ -31,8 +31,8 @@
             <a href="{% url "remove_cart" cart_items.id %}"><button class="sm-delete-btn"><i class="fas fa-trash"></i></button></a>
           </div>
           {% endfor %}
-        {% else %}
-          <img src="/static/images/empty-cart.png" class="empty-cart-img" alt="">
+          {% else %}
+          <img src="/static/images/empty-cart.png" class="empty-cart-img" alt="" style="max-width: 100%;">
         {% endif %}
       </div>  
     </div>
