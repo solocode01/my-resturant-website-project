@@ -14,7 +14,7 @@
         {% if cart %}
           {% for cart_items in cart %}
 
-          <div class="sm-product" style="max-width: 100%">
+          <div class="sm-product">
             <img src="{{ cart_items.menu.image.url }}" class="sm-product-img" alt="">
             <div class="sm-text">
               <p class="sm-product-name">{{ cart_items.menu.name }}</p>
