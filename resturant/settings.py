@@ -209,8 +209,8 @@ JAZZMIN_SETTINGS = {
 }
 
 
-PAYSTACK_SECRET_KEY ="sk_live_9ecf8307fd6fdf903a18c003eff5a205aafac217"
-PAYSTACK_PUBLIC_KEY ="pk_live_e9e6a8d1617b35cfd0081ead7cd06d7468097fe9"
+PAYSTACK_SECRET_KEY ="sk_test_1ef5e3b82a4de898ed673d7e2561e026ab027b56"
+PAYSTACK_PUBLIC_KEY ="pk_test_0a6061ba13ee31e6e6ae9df2654ed5e2f1c79f33"
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
